@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #090d16;
+    --foreground: #f3f4f6;
+    --card: #111827;
+    --card-foreground: #f9fafb;
+    --primary: #00d2ff;
+    --primary-hover: #00a8e8;
+    --accent: #38bdf8;
+    --gold: #f59e0b;
+    --muted: #1f293d;
+    --muted-foreground: #9ca3af;
+    --border: #1f293d;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Glassmorphic Utilities & Animations */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(0, 210, 255, 0.15);
+}
+
+.neon-glow {
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.25);
+}
+
+.neon-glow-gold {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.25);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.15) 0%, rgba(9, 13, 22, 0) 70%);
+}
+
+.bg-radial-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.1) 0%, rgba(9, 13, 22, 0) 60%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d2ff;
+}
