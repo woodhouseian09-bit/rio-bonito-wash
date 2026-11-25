@@ -48,7 +48,7 @@ export default function GallerySection() {
                 src={`${url}embed`}
                 className="w-full aspect-[9/16] rounded-xl"
                 frameBorder="0"
-                allowtransparency="true"
+                allowTransparency={true}
                 allow="encrypted-media"
                 title={`Proceso de Detailing ${i + 1}`}
               ></iframe>
